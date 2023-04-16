@@ -3,7 +3,7 @@
 I am building a laravel Multi Tenancy using Domain Driven Design Approach
 to simplify the process of creating the laravel app.
 
-- This is a very opinionated version. I recommend you clone it on your own risk.
+- This is a very opinionated version. I recommend you clone it at your own risk.
 
 ## Things To Do:
 ================================================================
