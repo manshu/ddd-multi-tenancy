@@ -1,5 +1,6 @@
 <?php
 
+use Gurulabs\App\Providers\TenancyServiceProvider;
 use Illuminate\Support\Facades\Facade;
 
 return [
@@ -176,7 +177,7 @@ return [
         // Gurulabs\App\Providers\BroadcastServiceProvider::class,
         Gurulabs\App\Providers\EventServiceProvider::class,
         Gurulabs\App\Providers\RouteServiceProvider::class,
-        Gurulabs\App\Providers\TenancyServiceProvider::class,
+        Gurulabs\App\Providers\TenancyServiceProvider::class, 
 
     ],
 

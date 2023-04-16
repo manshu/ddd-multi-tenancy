@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use Stancl\Tenancy\Database\Models\Domain;
+use Gurulabs\Domain\Domains\Domain;
 use Gurulabs\Domain\Tenants\Tenant;
 
 return [
