@@ -1,8 +1,9 @@
 <?php
 
+
 namespace Gurulabs\Http\Middleware;
 
-use Gurulabs\Providers\RouteServiceProvider;
+use Gurulabs\App\Providers\RouteServiceProvider;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;

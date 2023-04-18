@@ -3,11 +3,11 @@
 use Illuminate\Support\Facades\Route;
 
 
-use Gurulabs\Http\Authentication\Controllers\RegisteredUserController;
+use Gurulabs\Http\Authentication\Controllers\RegisteredTenantController;
 
-Route::get('/register', [RegisteredUserController::class, 'create'])
+Route::get('/register', [RegisteredTenantController::class, 'create'])
     ->middleware('guest')
     ->name('register');
 
-Route::post('/register', [RegisteredUserController::class, 'store'])
+Route::post('/register', [RegisteredTenantController::class, 'store'])
     ->middleware('guest');

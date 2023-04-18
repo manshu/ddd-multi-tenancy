@@ -25,18 +25,24 @@ use Gurulabs\Http\Authentication\Controllers\EmailVerificationNotificationContro
 |
 */
 
-Route::middleware([
-    'web',
-    InitializeTenancyByDomain::class,
-    PreventAccessFromCentralDomains::class,
-])->group(function () {
+Route::group([
+    'as' => 'tenant.',
+    'middleware' => [
+        'web',
+        InitializeTenancyByDomain::class,
+        PreventAccessFromCentralDomains::class,
+    ],
+], function () {
+
     Route::get('/', function () {
         return 'This is your multi-tenant application. The id of the current tenant is ' . tenant('id');
     });
 
+
     Route::get('/dashboard', function () {
-        return 'dashboard';
+        return view('layouts.app');
     });
+
 
     Route::get('/login', [AuthenticatedSessionController::class, 'create'])
     ->middleware('guest')
@@ -83,5 +89,6 @@ Route::middleware([
     Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])
         ->middleware('auth')
         ->name('logout');
+
 
 });

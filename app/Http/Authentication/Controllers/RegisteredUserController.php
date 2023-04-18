@@ -22,7 +22,7 @@ class RegisteredUserController extends Controller
      */
     public function create()
     {
-        return view('backend.auth.register');
+        return view('auth.register');
     }
     /**
      * Handle an incoming registration request.
@@ -36,6 +36,8 @@ class RegisteredUserController extends Controller
     {
         // return redirect('/login');
         $user = User::create([
+            'company' => $request->company,
+            'domain' => $request->domain,
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),

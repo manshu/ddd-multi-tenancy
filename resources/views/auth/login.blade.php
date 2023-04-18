@@ -24,7 +24,7 @@
                         </ul>
                     @endif
                     <div class="mt-6">
-                        <form action="#" method="POST" action="{{ route('login') }}" class="space-y-6">
+                        <form action="#" method="POST" action="{{ route('tenant.login') }}" class="space-y-6">
                             @csrf
                             <div>
                                 <label for="email" class="block text-sm font-medium text-gray-700"> Email address
