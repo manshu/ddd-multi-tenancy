@@ -128,6 +128,7 @@ class TenancyServiceProvider extends ServiceProvider
                 ->group(base_path('routes/tenant.php'));
         }
     }
+    
 
     protected function makeTenancyMiddlewareHighestPriority()
     {

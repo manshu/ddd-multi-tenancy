@@ -40,7 +40,7 @@ Route::group([
 
 
     Route::get('/dashboard', function () {
-        return view('layouts.app');
+        return view('dashboard.index');
     });
 
 
