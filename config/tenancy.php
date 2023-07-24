@@ -17,6 +17,7 @@ return [
      */
     'central_domains' => [
         'tenancy.test',
+        'crmgurus.net',
     ],
 
     /**
